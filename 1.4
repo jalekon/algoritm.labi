@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	float a, b, c, x, d, x1, x2;
+	cout << "vvedite zna4enie " << endl;
+	cin >> a >> b >> c;
+	if (a == 0)
+	{
+		if (b == 0)
+		{
+			if (c == 0)
+			{
+				cout << "mn-vo reshenui";
+			}
+			else
+			{
+				cout << "net korneu'";
+			}
+		}
+
+		else
+		{
+			x = -c / b;
+			cout << "x=" << x;
+		}
+	}
+	else
+	{
+		d = pow(b, 2) - 4 * a * c;
+		if (d < 0)
+		{
+			cout << "kompleksnue kornu";
+		}
+		else
+		{
+			x1 = (-b + sqrt(d)) / (2 * a);
+			x2 = (-b - sqrt(d)) / (2 * a);
+			cout << "x1= " << x1 << endl << "x2= " << x2;
+		}
+	}
+}
