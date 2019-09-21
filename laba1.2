@@ -4,25 +4,51 @@ using namespace std;
 int main()
 {
 	int a, b, c;
-	cout << "vvedite zna4enie" << endl; 
+	cout << "vvedite zna4enie" << endl;
 	cin >> a >> b >> c;
-	
-	if ((a>2) & (a<5))
+	if ((a == 2) || (a == 5))
 	{
-		cout << "vhodit" << a << endl;
+		cout << "na granice " << a << endl;
 	}
-	else cout << "ne vhodit" << a << endl;
-	
-		if ((b>2) & (b<5))
+	else
 	{
-		cout << "vhodit" << b << endl;
+		if ((a > 2) & (a < 5))
+		{
+			cout << "vhodit " << a << endl;
+		}
+		else
+		{
+			cout << "ne vhodit " << a << endl;
+		}
 	}
-	else cout << "ne vhodit" << b << endl;
-	
-	    	if ((c>2) & (c<5))
+	if ((b == 2) || (b == 5))
 	{
-		cout << "vhodit" << c << endl;
+		cout << "na granice "<< b << endl;
 	}
-	else cout << "ne vhodit" << c << endl;
-	
+	else
+	{
+		if ((b > 2) & (b < 5))
+		{
+			cout << "vhodit " << b << endl;
+		}
+		else
+		{
+			cout << "ne vhodit " << b << endl;
+		}
+	}
+	if ((c == 2) || (c == 5))
+	{
+		cout << "na granice " << c << endl;
+	}
+	else
+	{
+		if ((c > 2) & (c < 5))
+		{
+			cout << "vhodit " << c << endl;
+		}
+		else
+		{
+			cout << "ne vhodit " << c << endl;
+		}
+	}
 }
