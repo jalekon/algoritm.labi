@@ -9,12 +9,8 @@ int main()
 	s = 0;
 	cout << "vvedite b=>100 " << endl;
 	cin >> b;
-	for (i ; i <= b; i++)
-	{
+	for (i; i <= b; i++)
 		s = pow(i, 2) + s;
-	}
-	{
 		s = s / ((b + 1) - 100);
-	}
 	cout << s;
 }
