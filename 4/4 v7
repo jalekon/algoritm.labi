@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	int n, i, b, min, x;
+	int n, i, min, x;
 	cout << "Введите N " << endl;
 	cin >> n;
 	min = 9999;
