@@ -15,24 +15,27 @@ int main()
 
 	cout << "Введите массив " << endl;
 	for (i = 0; i < n; i++)
-		for (j = 0; j < n; j++)
+		for (j = 0; j < n; j++) {
 			cin >> a[i][j];
 
-	if (a[i][j] < min) {
-		min = a[i][j];
-		imin = i;
-		jmin = j;
-	}
-	else
-		if (a[i][j] > max) {
-			max = a[i][j];
-			imax = i;
-			jmax = j;
+			if (a[i][j] < min) {
+				min = a[i][j];
+				imin = i;
+				jmin = j;
+			}
+			else
+				if (a[i][j] > max) {
+					max = a[i][j];
+					imax = i;
+					jmax = j;
+				}
 		}
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n; i++){
 		for (j = 0; j < n; j++)
 			cout << a[i][j] << "|";
+			cout << endl;
+		}
 	cout << endl;
-	cout << "min= " << min << " (" << imin << ";" << jmin << ")";
+	cout << "min= " << min << " (" << imin << ";" << jmin << ")"<<endl;
 	cout << "max= " << max << " (" << imax << ";" << jmax << ")";
 }
