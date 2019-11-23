@@ -1,0 +1,54 @@
+using namespace std;
+#include <iostream> 
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, i, j, s, p, k;
+	cout << "Введите N " << endl;
+	cin >> n;
+	int** a = new int* [n];
+	for (i = 0; i < n; i++)
+		a[i] = new int[n];
+
+	cout << "Введите массив " << endl;
+	for (i = 0; i < n; i++)
+		for (j = 0; j < n; j++)
+			cin >> a[i][j];
+
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++)
+			cout << a[i][j] << "|";
+		cout << endl;
+	}
+
+	for (i = 0, p = 1, k = 0; i < n; i++)
+		for (j = 0; j < i; j++) {
+			k++;
+			p *= a[i][j];
+		}
+	cout << endl << "Произведение и число элементов под главной дмагональю = " << p << " " << k;
+	
+	for (i =0, s = 0, k = 0; i <n-1; i++)
+		for (j = i+1; j < n; j++) {
+			s+=a[i][j];
+			k++;
+		}
+	cout << endl << "Сумма и число элементов над главной дмагональю = " << s << " " << k;
+
+	for (i = 0, p = 1, k = 0; i < n; i++)
+		for (j = 0; j < i; j++) 
+			if(a[i][j]>0) {
+			k++;
+			p *= a[i][j];
+		}
+	cout << endl << "Произведение и число положительных элементов под главной дмагональю = " << p << " " << k ;
+
+	for (i = 0, s = 0, k = 0; i < n - 1; i++)
+		for (j = i + 1; j < n; j++) 
+			if (a[i][j] < 0){
+			s += a[i][j];
+			k++;
+		}
+	cout << endl << "Сумма и число отрицательных элементов над главной дмагональю = " << s << " " << k;
+}
