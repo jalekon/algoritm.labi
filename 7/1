@@ -1,0 +1,21 @@
+using namespace std;
+#include <string>
+#include <iostream>
+#include <windows.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int l, i, k;
+	string S;
+	cout << "Введите строку: ";
+	getline(cin, S);
+	k = 0;
+	l = S.size();	
+	for (i = 0; i < l; i++) 
+		if (S[i] == ' ')
+			k++;
+	cout << "Длина строки = " << l - k;
+}
