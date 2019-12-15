@@ -3,12 +3,12 @@ using namespace std;
 
 int main()
 {
-	int N, i, s;
+	float N, i, s;
 	i = 1;
 	s = 0;
-	cout << "vvedite N "<< endl;
+	cout << "vvedite N " << endl;
 	cin >> N;
-	while (i <= N) 
+	while (i <= N)
 	{
 		s = sqrt(2 + s);
 		i++;
