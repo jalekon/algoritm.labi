@@ -1,28 +1,23 @@
 using System;
 
-namespace Laba_8_3
+namespace laba_8_3
 
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n, c;
-            int[] b = new int[10];
+            int n,  x;
             Console.WriteLine("Введите n ");
             n = Convert.ToInt32(Console.ReadLine());
-            c = -1;
-            for (int i = 0; (n > 0); i++)
-            {
-                c++;
-                b[i] = n % 10;
-                n = n / 10;
-            }
             Console.WriteLine("ответ");
-            for (int i = c; i >= 0; i--)
+            while (n>0)
             {
-                Console.WriteLine(b[i]);
+                x = n % 10;
+                Console.WriteLine(x);
+                n = (n - x) / 10;
             }
+           
         }
     }
 }
