@@ -1,36 +1,28 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Laba_8_3
+
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите число: ");
-            int N = Convert.ToInt32(Console.ReadLine());
-            int n, k;
-            while (N > 10)
+            int n, c;
+            int[] b = new int[10];
+            Console.WriteLine("Введите n ");
+            n = Convert.ToInt32(Console.ReadLine());
+            c = -1;
+            for (int i = 0; (n > 0); i++)
             {
-                n = N;
-                k = 0;
-                while (n > 10)
-                {
-                    n /= 10;
-                    k++;
-                }
-                if (n==0)
-                    Console.WriteLine("0");
-                else
-                Console.WriteLine(n);
-                N = N % Convert.ToInt32(Math.Pow(10, k));
-
+                c++;
+                b[i] = n % 10;
+                n = n / 10;
             }
-            Console.WriteLine(N);
-            Console.Read();
+            Console.WriteLine("ответ");
+            for (int i = c; i >= 0; i--)
+            {
+                Console.WriteLine(b[i]);
+            }
         }
     }
 }
