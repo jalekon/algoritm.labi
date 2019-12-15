@@ -7,26 +7,16 @@ int main()
 	cout << "vvedite zna4enie <=100" << endl;
 	cin >> n;
 	if ((11 <= n) & (n < 15))
-	{
 		cout << n << " let";
-	}
 	else
 	{
 		a = n % 10;
 		if (a == 1)
-		{
 			cout << n << " god";
-		}
 		else
-		{
 			if ((1 < a) & (a < 5))
-			{
 				cout << n << " goda";
-			}
 			else
-			{
 				cout << n << " let";
-			}
-		}
 	}
 }
