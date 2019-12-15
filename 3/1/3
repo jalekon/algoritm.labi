@@ -3,12 +3,12 @@ using namespace std;
 
 int main()
 {
-	int N, i, s;
+	float N, i, s;
 	i = 2;
 	s = 1;
-	cout << "vvedite N "<< endl;
+	cout << "vvedite N " << endl;
 	cin >> N;
-	while (i <= N) 
+	while (i <= N)
 	{
 		s = s * (1 + (1 / (i * i)));
 		i++;
