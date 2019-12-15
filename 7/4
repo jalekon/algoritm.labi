@@ -13,17 +13,17 @@ int main()
 	cout << "Введите строку: ";
 	getline(cin, s);
 	k = 0;
-	x= s.size();
+	x = s.size();
 
-	for (i = 0; i < s.size(); i++) {
-		s[i] = tolower(s[i]);
+	for (i = 0; i < s.size(); i++){
 		if (s[i] == ' ') {
 			s.erase(i, 1);
 			k++;
 		}
-	}
-	k = x - k-1;
-	for (i = 0; i < k; i++,k--)
+		s[i] = tolower(s[i]);
+		}
+	k = x - k - 1;
+	for (i = 0; i < k; i++, k--)
 		if (s[i] != s[k]) {
 			cout << "не перевертыш";
 			return 0;
