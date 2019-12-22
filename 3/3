@@ -11,10 +11,7 @@ int main()
 		for (i = 1; i <= n; i++)
 		{
 			a = x * i;
-			if (a < 10)
-				cout << a << " ";
-			else
-				cout << a << " ";
+			cout << a << " ";
 		}
 		cout << endl;
 	}
